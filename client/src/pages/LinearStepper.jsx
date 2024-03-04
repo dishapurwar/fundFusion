@@ -12,6 +12,7 @@ import {
   StepLabel,
   StepConnector,
   Grid,
+  Paper, // Import Paper component from Material-UI
 } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
@@ -64,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#EEE", // Button background color on hover
     },
+  },
+  paper: {
+    padding: theme.spacing(3), // Add padding to the Paper component
   },
 }));
 function getSteps() {
@@ -416,15 +420,14 @@ const Additional = () => {
         render={({ field }) => (
           <TextField
             id="description"
-            // label="Description"
             variant="outlined"
             placeholder="Enter details here"
             fullWidth
             margin="normal"
-            style={{ width: "500px" }}
-            inputProps={{ maxLength: 100 }} // Limit the input to 100 characters
-            multiline // Allow multiline input
-            rows={4} // Set the number of rows to accommodate multiline input
+            inputProps={{ maxLength: 100 }}
+            multiline
+            rows={4}
+            style={{ maxWidth: "74%", width: "100%" }} // Ensure input box fills the container width
             {...field}
           />
         )}
@@ -531,29 +534,34 @@ const LinearStepper = () => {
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(handleNext)}>
             <Grid container spacing={3}>
-              <Grid item xs={6}>
-                {getStepContent(activeStep)}
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  {getStepContent(activeStep)}
+                </Paper>
               </Grid>
-              <Grid item xs={6}>
-                {/* Add additional form fields here */}
+              <Grid item xs={12}>
+                <Grid container justify="flex-end">
+                  {/* Add buttons within the Grid container */}
+                  <Button
+                    className={
+                      activeStep === 0 ? classes.backButton : classes.button
+                    }
+                    disabled={activeStep === 0}
+                    onClick={handleBack}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                  >
+                    {getNextButtonLabel()}
+                  </Button>
+                </Grid>
               </Grid>
             </Grid>
-
-            <Button
-              className={activeStep === 0 ? classes.backButton : classes.button}
-              disabled={activeStep === 0}
-              onClick={handleBack}
-            >
-              Back
-            </Button>
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="primary"
-              type="submit"
-            >
-              {getNextButtonLabel()}
-            </Button>
           </form>
         </FormProvider>
       )}
