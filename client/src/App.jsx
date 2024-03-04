@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import { createContext } from "react";
 import { Route, Routes } from 'react-router-dom';
@@ -10,12 +8,16 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import Dashboard from "./pages/dashboard.jsx";
-
+import LinearStepper from "./pages/LinearStepper.jsx";
 
 import Layout from './Layout';
 import { UserContextProvider } from './UserContext';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
 
 
+import Paper from "@material-ui/core/Paper";
+import Box from "@material-ui/core/Box";
 
 axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.withCredentials = true;
@@ -46,12 +48,14 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path="/account" element={<ProfilePage />} />
-            
+            <Route path="/startup" element={<LinearStepper />} />
           </Route>
         </Routes>
+        <CssBaseline />
       </RecoveryContext.Provider>
     </UserContextProvider>
   );
 }
+
 
 export default App;

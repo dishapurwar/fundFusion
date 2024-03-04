@@ -1,4 +1,3 @@
- 
 import React, { useState, useContext } from 'react';
 import { UserContext } from "./UserContext";
 import axios from 'axios'; 
@@ -38,7 +37,15 @@ export default function Header() {
                         >
                             Home
                         </Link>
-                          
+                        {user && (
+                            <Link
+                                to="/startup"
+                                className="flex items-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 via-yellow-500 from-purple-500 to-red-500 text-transparent bg-clip-text text-sm font-normal focus:outline-none rounded-full"
+                            >
+                                StartUp
+                            </Link>
+                        )}
+                    
                         <Link
                             to="/contact"
                             className="flex items-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 via-yellow-500 from-purple-500 to-red-500 text-transparent bg-clip-text text-sm font-normal focus:outline-none rounded-full"
