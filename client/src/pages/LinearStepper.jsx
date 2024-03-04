@@ -98,6 +98,7 @@ const BasicForm = () => {
               placeholder="Enter Your First Name"
               fullWidth
               margin="normal"
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -120,6 +121,7 @@ const BasicForm = () => {
               placeholder="Enter Your Last Name"
               fullWidth
               margin="normal"
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -141,6 +143,7 @@ const BasicForm = () => {
               value={field.value}
               onChange={field.onChange}
               row
+              required // Add the required attribute
             >
               <FormControlLabel value="male" control={<Radio />} label="Male" />
               <FormControlLabel
@@ -180,6 +183,7 @@ const ContactForm = () => {
               placeholder="Enter Your E-mail Address"
               fullWidth
               margin="normal"
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -202,6 +206,7 @@ const ContactForm = () => {
               placeholder="Enter Your Phone Number"
               fullWidth
               margin="normal"
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -224,6 +229,7 @@ const ContactForm = () => {
               placeholder="Enter Linkedin URL"
               fullWidth
               margin="normal"
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -252,6 +258,7 @@ const Startup = () => {
               placeholder="Enter the name of your Startup"
               fullWidth
               margin="normal"
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -274,6 +281,7 @@ const Startup = () => {
               value={field.value}
               onChange={field.onChange}
               row
+              required // Add the required attribute
             >
               <FormControlLabel value="yes" control={<Radio />} label="Yes" />
               <FormControlLabel value="no" control={<Radio />} label="No" />
@@ -298,6 +306,7 @@ const Startup = () => {
               placeholder="Enter website URL"
               fullWidth
               margin="normal" // Set margin to dense to reduce spacing
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -320,6 +329,7 @@ const Startup = () => {
                 value={field.value}
                 onChange={(e) => field.onChange(e.target.value)}
                 style={{ width: "290px", height: "50px" }}
+                required // Add the required attribute
               />
             )}
           />
@@ -342,6 +352,7 @@ const Startup = () => {
               placeholder="Enter the category of your Startup"
               fullWidth
               margin="normal" // Set margin to dense to reduce spacing
+              required // Add the required attribute
               {...field}
             />
           )}
@@ -428,6 +439,7 @@ const Additional = () => {
             multiline
             rows={4}
             style={{ maxWidth: "74%", width: "100%" }} // Ensure input box fills the container width
+            required // Add the required attribute
             {...field}
           />
         )}
@@ -436,6 +448,7 @@ const Additional = () => {
         sitekey="6LdNGokpAAAAAIhIc-kdetXBogyDfTJfKVrNRLpX" // Replace 'YOUR_SITE_KEY' with your actual reCAPTCHA site key
         onChange={handleVerification}
         style={{ margin: "20px auto", display: "block" }}
+        required // Add the required attribute
       />
       {/* Add Submit Button */}
       {/* <Button
