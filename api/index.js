@@ -1,3 +1,6 @@
+
+
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -16,8 +19,8 @@ const session = require("express-session");
 const passport = require("passport");
 const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 
-const clientid="888467574492-earl11br5f1p5q5evh87kd15fg07nm6n.apps.googleusercontent.com"
-const clientsecret="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"
+const clientid = "888467574492-earl11br5f1p5q5evh87kd15fg07nm6n.apps.googleusercontent.com"
+const clientsecret = "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"
 
 require("dotenv").config();
 const app = express();
@@ -32,14 +35,14 @@ app.use(
   cors({
     credentials: true,
     origin: "http://localhost:5173",
-    methods:"GET,POST,PUT,DELETE",
+    methods: "GET,POST,PUT,DELETE",
   })
 );
 
 app.use(session({
-  secret:"67532587837257892ghjgfegefj",
-  resave:false,
-  saveUninitialized:true
+  secret: "67532587837257892ghjgfegefj",
+  resave: false,
+  saveUninitialized: true
 }))
 
 mongoose.connect(process.env.MONGO_URL);
@@ -49,68 +52,68 @@ app.use(passport.session());
 
 passport.use(
   new OAuth2Strategy({
-      clientID:clientid,
-      clientSecret:clientsecret,
-      callbackURL:"/auth/google/callback",
-      scope:["profile","email"]
+    clientID: clientid,
+    clientSecret: clientsecret,
+    callbackURL: "/auth/google/callback",
+    scope: ["profile", "email"]
   },
-  async(accessToken,refreshToken,profile,done)=>{
+    async (accessToken, refreshToken, profile, done) => {
       try {
-          let user = await User.findOne({googleId:profile.id});
+        let user = await User.findOne({ googleId: profile.id });
 
-          if(!user){
-              user = new User({
-                  googleId:profile.id,
-                  name:profile.name,
-                  email:profile.emails[0].value,
-                  image:profile.photos[0].value
-              });
+        if (!user) {
+          user = new User({
+            googleId: profile.id,
+            name: profile.name,
+            email: profile.emails[0].value,
+            image: profile.photos[0].value
+          });
 
-              await user.save();
-          }
+          await user.save();
+        }
 
-          return done(null,user)
+        return done(null, user)
       } catch (error) {
-          return done(error,null)
+        return done(error, null)
       }
-  }
+    }
   )
 )
 
-passport.serializeUser((user,done)=>{
-  done(null,user);
+passport.serializeUser((user, done) => {
+  done(null, user);
 })
 
-passport.deserializeUser((user,done)=>{
-  done(null,user);
+passport.deserializeUser((user, done) => {
+  done(null, user);
 });
 
 // initial google ouath login
-app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));
+app.get("/auth/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 
-app.get("/auth/google/callback",passport.authenticate("google",{
-  successRedirect:"http://localhost:5173/dashboard",
-  failureRedirect:"http://localhost:5173/login"
+app.get("/auth/google/callback", passport.authenticate("google", {
+  successRedirect: "http://localhost:5173/",
+  failureRedirect: "http://localhost:5173/login"
 }))
 
-app.get("/login/success",async(req,res)=>{
+app.get("/login/success", async (req, res) => {
 
-  if(req.user){
-      res.status(200).json({message:"user Login",user:req.user})
-  }else{
-      res.status(400).json({message:"Not Authorized"})
+  if (req.user) {
+    res.status(200).json({ message: "user Login", user: req.user })
+  } else {
+    res.status(400).json({ message: "Not Authorized" })
   }
 })
 
-app.get("/logout",(req,res,next)=>{
-  req.logout(function(err){
-      if(err){return next(err)}
-      res.redirect("http://localhost:3001");
+app.get("/logout", (req, res, next) => {
+  req.logout(function (err) {
+    if (err) { return next(err) }
+    res.redirect("http://localhost:5173");
   })
 })
 
-
 EventEmitter.defaultMaxListeners = 15;
+
 function getUserDataFromReq(req) {
   return new Promise((resolve, reject) => {
     jwt.verify(req.cookies.token, jwtSecret, {}, async (err, userData) => {
@@ -350,7 +353,6 @@ app.post("/logout", authenticateToken, async (req, res) => {
   }
 });
 
-
 const verifyToken = (req, res, next) => {
   const token = req.cookies.token;
 
@@ -374,6 +376,6 @@ const verifyToken = (req, res, next) => {
   });
 };
 
-
-
-app.listen(4000);
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
+});

@@ -2,18 +2,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Chat from "../Component/Chat";
 import Footer from "../Footer";
+import Header from "../Header";
 import video from '/video1.mp4';
 import { TypeAnimation } from 'react-type-animation';
 
 
 export default function IndexPage() {
-  const [hosted, setHosted] = useState([]);
-  useEffect(() => {
-    axios.get('/user-hosted').then(response => {
-      // console.log(response.data);
-      setHosted(response.data);
-    });
-  }, []);
+  // const [hosted, setHosted] = useState([]);
+  // useEffect(() => {
+  //   axios.get('/user-hosted').then(response => {
+  //     // console.log(response.data);
+  //     setHosted(response.data);
+  //   });
+  // }, []);
   return (
     <div className="p-0 m-0">
       <div className="relative">
@@ -69,13 +70,6 @@ export default function IndexPage() {
    
   />
 </div>
-
- 
-
-
-
-
-
           </div>
         </div>
       </div>
