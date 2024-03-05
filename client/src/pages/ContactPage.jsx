@@ -12,7 +12,7 @@ const ContactPage = () => {
         <div className="container3">
           <h2>About Us</h2>
           <p>
-          The "JIIT Insights" is a comprehensive web-based platform designed to streamline and enhance the organization and participation of events conducted by multiple societies within a college campus. 
+          "Unlocking Innovation, One Investment at a Time. Welcome to FundFusion, where groundbreaking startups meet visionary investors. Empowering entrepreneurs to thrive and investors to discover the next big thing."
           </p>
         </div>
       </div>
@@ -20,18 +20,18 @@ const ContactPage = () => {
         <div className="row3">
           <div className="contact-info">
             <div className="contact-info-item">
-            <a href="https://www.google.co.in/maps/place/Jaypee+Institute+of+Information+Technology/@28.5190905,77.3628473,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce63ce7fae835:0x5714a74a5abdf3e6!8m2!3d28.5190905!4d77.3654222!16s%2Fg%2F11csrx8h_7?entry=ttu" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://www.google.co.in/maps/place/Jaypee+Institute+of+Information+Technology/@28.5190905,77.3628473,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce63ce7fae835:0x5714a74a5abdf3e6!8m2!3d28.5190905!4d77.3654222!16s%2Fg%2F11csrx8h_7?entry=ttu" target="_blank" rel="noopener noreferrer">
               <div className="contact-info-icon">
               <FontAwesomeIcon icon={faMapMarkerAlt} size="1x"/>
               </div>
-              </a>
+              </a> */}
 
-              <div className="contact-info-content">
+              {/* <div className="contact-info-content">
                 <h4>Address</h4>
                 <p>
                 Jaypee Wish Town Village<br /> Sector-128 <br />Noida-201304, Uttar Pradesh
                 </p>
-              </div>
+              </div> */}
             </div>
 
             <div className="contact-info-item">
@@ -43,7 +43,7 @@ const ContactPage = () => {
 
               <div className="contact-info-content">
                 <h4>Instagram</h4>
-                <p>@jiitinsights</p>
+                <p>@fundfusion</p>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ const ContactPage = () => {
 
               <div className="contact-info-content">
                 <h4>Twitter</h4>
-                <p>@jiitinsights12</p>
+                <p>@fundfusion</p>
               </div>
             </div>
           </div>

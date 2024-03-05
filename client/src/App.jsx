@@ -9,7 +9,6 @@ import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import Dashboard from "./pages/dashboard.jsx";
 import LinearStepper from "./pages/LinearStepper.jsx";
-
 import Layout from './Layout';
 import { UserContextProvider } from './UserContext';
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -18,6 +17,7 @@ import Container from "@material-ui/core/Container";
 
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
+import ContactPage from "./pages/ContactPage.jsx";
 
 axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.withCredentials = true;
@@ -49,6 +49,7 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path="/account" element={<ProfilePage />} />
             <Route path="/startup" element={<LinearStepper />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Route>
         </Routes>
         <CssBaseline />

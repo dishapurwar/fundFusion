@@ -31,7 +31,7 @@ export default function IndexPage() {
 
   />
   <TypeAnimation
-    sequence={['JIIT Insights...']}
+    sequence={['FundFusion...']}
     wrapper="span"
     speed={50}
     className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
@@ -41,14 +41,14 @@ export default function IndexPage() {
 
 <div className="text-white text-4xl font-bold mb-4">
   <TypeAnimation
-    sequence={['Never']}
+    sequence={['Where']}
     wrapper="span"
     speed={20}
     className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
    
   />
   <TypeAnimation
-    sequence={[' miss an event']}
+    sequence={[' Ambitions takes flight....']}
     wrapper="span"
     speed={50}
  
@@ -56,19 +56,19 @@ export default function IndexPage() {
 </div>
 
 <div className="text-white text-4xl font-bold mb-4">
-  <TypeAnimation
+  {/* <TypeAnimation
     sequence={['Get to know everything about ']}
     wrapper="span"
     speed={20}
   
-  />
-  <TypeAnimation
+  /> */}
+  {/* <TypeAnimation
     sequence={['college']}
     wrapper="span"
     speed={50}
     className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
    
-  />
+  /> */}
 </div>
           </div>
         </div>
@@ -77,21 +77,21 @@ export default function IndexPage() {
       <section id="features" className="p-0 bg-gradient-to-b from-black to-black">
           <div className="flex flex-wrap justify-center">
             <div className="feature-box w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-5 text-center">
-            <i class="fas fa-tag fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
+            <i class="fas fa-video fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
 
-              <h3 className="font-bold text-xl mt-2 text-white">Society Swag Central</h3>
+              <h3 className="font-bold text-xl mt-2 text-white">Peer to Peer</h3>
               <p className="text-gray-500">Get Your Exclusive Society Merchandise Here! Customized gear, trendy designs, and member discounts.</p>
             </div>
             <div className="feature-box w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-5 text-center">
-            <i className="fas fa-bullseye fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
+            <i className="fas fa-dollar-sign fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
 
 
-              <h3 className="font-bold text-xl mt-2 text-white">Never Miss an Epic Moment</h3>
+              <h3 className="font-bold text-xl mt-2 text-white">Invest through MetaMask</h3>
               <p className="text-gray-500">Event Reminders Just When You Need Them! Personalized notifications, countdowns, and RSVP options.</p>
             </div>
             <div className="feature-box w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-5 text-center">
-            <i className="fas fa-brain fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
-              <h3 className="font-bold text-xl mt-2 text-white">All-Inclusive Campus Hub</h3>
+            <i className="fas fa-check-circle fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
+              <h3 className="font-bold text-xl mt-2 text-white">KYC Verification</h3>
               <p className="text-gray-500">Your One-Stop Access to Everything! From society news to mess schedules to past achievements, it's all here.</p>
             </div>
           </div>

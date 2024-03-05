@@ -16,11 +16,11 @@ const Footer = () => {
           <div className="footer-col">
             <h4>About</h4>
             <ul>
-              <li><a href="#">FAQ</a></li>
+              {/* <li><a href="#">FAQ</a></li> */}
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
-          <div className="footer-col">
+          {/* <div className="footer-col">
             <h4>Stay Tuned!</h4>
             <ul>
               <li><a href="#">Discord</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
               <li><a href="#">Twitter</a></li>
               <li><a href="#">Linkedin</a></li>
             </ul>
-          </div>
+          </div> */}
           <div className="footer-col">
             <h4>Follow Us</h4>
             <div className="social-links">
@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="copyright">
-          &copy; 2023 JIIT INSIGHTS. All rights reserved.
+          &copy; 2024 FundFusion. All rights reserved.
         </div>
       </div>
     </footer>
