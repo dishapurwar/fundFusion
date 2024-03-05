@@ -48,7 +48,7 @@ export default function IndexPage() {
    
   />
   <TypeAnimation
-    sequence={[' Ambitions takes flight....']}
+    sequence={[' Ambitions take Flight']}
     wrapper="span"
     speed={50}
  
@@ -61,8 +61,8 @@ export default function IndexPage() {
     wrapper="span"
     speed={20}
   
-  /> */}
-  {/* <TypeAnimation
+  />
+  <TypeAnimation
     sequence={['college']}
     wrapper="span"
     speed={50}
@@ -92,7 +92,7 @@ export default function IndexPage() {
             <div className="feature-box w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-5 text-center">
             <i className="fas fa-check-circle fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
               <h3 className="font-bold text-xl mt-2 text-white">KYC Verification</h3>
-              <p className="text-gray-500">Ensure security and trust with our rigorous KYC verification, safeguarding every investor and startup on FundFusion</p>
+              <p className="text-gray-500">Ensure security and trust with our rigorous KYC verification, safeguarding every investor and startup on FundFusion.</p>
             </div>
           </div>
         </section>
