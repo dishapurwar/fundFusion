@@ -80,19 +80,19 @@ export default function IndexPage() {
             <i class="fas fa-video fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
 
               <h3 className="font-bold text-xl mt-2 text-white">Peer to Peer</h3>
-              <p className="text-gray-500">Get Your Exclusive Society Merchandise Here! Customized gear, trendy designs, and member discounts.</p>
+              <p className="text-gray-500">Forge connections and spark innovation with our interactive peer-to-peer meets, where startups pitch directly to potential investors.</p>
             </div>
             <div className="feature-box w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-5 text-center">
             <i className="fas fa-dollar-sign fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
 
 
               <h3 className="font-bold text-xl mt-2 text-white">Invest through MetaMask</h3>
-              <p className="text-gray-500">Event Reminders Just When You Need Them! Personalized notifications, countdowns, and RSVP options.</p>
+              <p className="text-gray-500">Seamless and secure investment journeys begin with MetaMask integration, providing a user-friendly gateway to the world of crowdfunding.</p>
             </div>
             <div className="feature-box w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-5 text-center">
             <i className="fas fa-check-circle fa-beat-fade fa-2x" style={{ color: '#b3009b' }}></i>
               <h3 className="font-bold text-xl mt-2 text-white">KYC Verification</h3>
-              <p className="text-gray-500">Your One-Stop Access to Everything! From society news to mess schedules to past achievements, it's all here.</p>
+              <p className="text-gray-500">Ensure security and trust with our rigorous KYC verification, safeguarding every investor and startup on FundFusion</p>
             </div>
           </div>
         </section>
